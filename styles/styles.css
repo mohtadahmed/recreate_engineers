@@ -1,0 +1,12 @@
+/* Navbar CSS Starts */
+
+.dropdown-menu-columns {
+    width: 600px;
+    /* Set your desired width */
+}
+
+.dropdown-menu-columns .col {
+    margin-right: 10px;
+}
+
+/* Navbar CSS Ends */
