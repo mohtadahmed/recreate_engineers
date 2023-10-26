@@ -1,12 +1,16 @@
 /* Navbar CSS Starts */
 
 .dropdown-menu-columns {
-    width: 600px;
-
+    width: 82vw;
 }
 
 .dropdown-menu-columns .col {
     margin-right: 10px;
+    padding: 0.5%;
+}
+
+.color-gray {
+    background-color: #b2bec3;
 }
 
 /* Navbar CSS Ends */
@@ -55,3 +59,12 @@
 }
 
 /* Social Links CSS Ends */
+
+
+/* Footer CSS Starts */
+
+.bg-dark-css {
+    background-color: #2f3542;
+}
+
+/* Footer CSS Ends */
