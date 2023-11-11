@@ -54,6 +54,12 @@
     border: 1px solid #0a66c2;
 }
 
+.social-links a:hover .fa-square-twitter {
+    color: #1da1f2;
+    transform: translate(0, -5px);
+    border: 1px solid #1da1f2;
+}
+
 /* Social Links CSS Ends */
 
 
