@@ -1857,3 +1857,48 @@ body.modal-open {
   .contact-directory { padding: 24px; }
   .contact-directory .contact-details { display: block; }
 }
+
+/* Vertical brand reel. The second group is decorative, for a seamless loop. */
+.partners .wrap { position: relative; gap: 30px; padding-block: 14px; }
+.brand-logos { display: block; height: 88px; overflow: hidden; width: 100%; mask-image: linear-gradient(transparent, black 18%, black 82%, transparent); }
+.logo-track { width: 100%; }
+.logo-group { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.logo-cell { height: 80px; display: flex; align-items: center; justify-content: center; padding: 15px; }
+.brand-logos img { width: 105px; height: 42px; max-height: 42px; object-fit: contain; }
+.logo-pause { flex-shrink: 0; background: transparent; border: 1px solid #c6cebc; border-radius: 3px; padding: 7px 10px; font-size: 9px; display: flex; align-items: center; gap: 10px; }
+.logo-pause:hover { background: #e1e8d7; }
+.logo-pause[hidden] { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .logo-track.is-looping { animation: logo-rise 22s linear infinite; will-change: transform; }
+  .brand-logos:hover .logo-track, .brand-logos:focus-within .logo-track, .logo-track.is-paused { animation-play-state: paused; }
+  .motion-ready .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.65,.3,1); }
+  .motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  .hero-copy { animation: hero-arrive .85s ease both; }
+  .hero-visual { animation: hero-arrive 1s .12s ease both; }
+  .hero .status-dot { animation: signal-pulse 3s ease-in-out infinite; }
+  .solution-card .solution-icon { display: inline-block; transition: transform .3s ease; }
+  .solution-card:hover .solution-icon { transform: translateY(-4px) rotate(-5deg); }
+  .button .arrow-icon, .text-link .arrow-icon { transition: transform .25s ease; }
+  .button:hover .arrow-icon, .text-link:hover .arrow-icon { transform: translate(2px, -2px); }
+}
+@keyframes logo-rise { to { transform: translateY(-50%); } }
+@keyframes hero-arrive { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes signal-pulse { 0%,100% { box-shadow: 0 0 0 0 #c6f47700; } 50% { box-shadow: 0 0 0 5px #c6f47722; } }
+@media (max-width: 850px) {
+  .partners .wrap { display: flex; flex-wrap: wrap; gap: 12px; }
+  .partners-label { width: 100%; margin-bottom: 0; }
+  .brand-logos { flex: 1; min-width: 0; }
+  .logo-group { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .partners .wrap { padding-block: 20px; justify-content: center; }
+  .brand-logos { flex-basis: 100%; height: 150px; }
+  .logo-group { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .logo-cell { height: 75px; padding: 15px; }
+  .brand-logos img { width: 90px; height: 35px; max-height: 35px; }
+  .logo-pause { margin-top: 3px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-logos { height: auto; overflow: visible; mask-image: none; }
+  .logo-group[aria-hidden="true"], .logo-pause { display: none; }
+}

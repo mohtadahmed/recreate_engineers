@@ -64,3 +64,46 @@ const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(ent
 ['main','about','solutions','products','contact'].forEach(id=>observer.observe(document.getElementById(id)));
 // Preserve the contact anchor used by the previous site.
 if(location.hash==='#Contact')document.querySelector('#contact').scrollIntoView();
+
+// Progressive motion: content stays visible if JavaScript or observation is unavailable.
+const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
+const logoTrack = document.querySelector('.logo-track');
+const logoPause = document.querySelector('.logo-pause');
+const logoOriginal = logoTrack.querySelector('.logo-group');
+const logoCopy = logoOriginal.cloneNode(true);
+logoCopy.setAttribute('aria-hidden', 'true');
+logoCopy.querySelectorAll('img').forEach(image => image.alt = '');
+logoTrack.append(logoCopy);
+logoTrack.classList.add('is-looping');
+logoPause.addEventListener('click', () => {
+  const paused = logoPause.getAttribute('aria-pressed') !== 'true';
+  logoPause.setAttribute('aria-pressed', String(paused));
+  logoPause.setAttribute('aria-label', paused ? 'Resume logo animation' : 'Pause logo animation');
+  logoPause.replaceChildren(document.createTextNode(paused ? 'Resume logos ' : 'Pause logos '));
+  const icon = document.createElement('span');
+  icon.setAttribute('aria-hidden', 'true');
+  icon.textContent = paused ? '▷' : 'Ⅱ';
+  logoPause.append(icon);
+  logoTrack.classList.toggle('is-paused', paused);
+});
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: .08 });
+  document.querySelectorAll('.section-intro, .solution-card, .about-art, .about-copy, .process-grid > div, .contact-layout > div').forEach((element, index) => {
+    element.classList.add('reveal');
+    element.style.transitionDelay = `${(index % 4) * 55}ms`;
+    revealObserver.observe(element);
+  });
+  document.documentElement.classList.add('motion-ready');
+}
+function syncMotionPreference() {
+  logoPause.hidden = motionPreference.matches;
+}
+motionPreference.addEventListener('change', syncMotionPreference);
+syncMotionPreference();

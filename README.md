@@ -18,6 +18,8 @@ Open the server in your browser. Both `/index.html` and the legacy `/home.html` 
 - Product category filters and search across names, brands and specifications
 - Direct phone, email and social contact links
 - Local imagery, CSS, JavaScript and SVG illustrations
+- Subtle entrance and hover animations
+- Vertical supplier-logo reel with pause/resume and hover pause
 - Reduced-motion support and keyboard navigation
 
 Version 1 has no inquiry form, submission handling, database or server-side application. Contact details are presented as direct phone, email and social links. The site can be hosted on any static host.
