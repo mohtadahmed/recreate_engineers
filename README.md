@@ -19,7 +19,7 @@ Open the server in your browser. Both `/index.html` and the legacy `/home.html` 
 - Direct phone, email and social contact links
 - Local imagery, CSS, JavaScript and SVG illustrations
 - Subtle entrance and hover animations
-- Vertical supplier-logo reel with pause/resume and hover pause
+- Horizontal supplier-logo reel with hover pause and reduced-motion support
 - Reduced-motion support and keyboard navigation
 
 Version 1 has no inquiry form, submission handling, database or server-side application. Contact details are presented as direct phone, email and social links. The site can be hosted on any static host.
