@@ -1,10 +1,10 @@
 :root {
-  --ink:#1b2a23;
-  --muted:#747b74;
-  --paper:#f8f9f5;
-  --lime:#c6f477;
-  --line:#dce0d7;
-  --dark:#182620;
+  --ink:#26343c;
+  --muted:#74797b;
+  --paper:#f8fafb;
+  --accent:#009fcd;
+  --line:#d8dddf;
+  --dark:#1d2e38;
   --mono:'Courier New',monospace
 }
 * {
@@ -36,11 +36,11 @@ button {
   cursor:pointer
 }
 button:focus-visible,a:focus-visible {
-  outline:3px solid #5a861c;
+  outline:3px solid #1c6686;
   outline-offset:5px
 }
 input:focus-visible,select:focus-visible,textarea:focus-visible {
-  outline:2px solid #5a861c;
+  outline:2px solid #1c6686;
   outline-offset:2px
 }
 button {
@@ -76,7 +76,7 @@ h3 {
   z-index:100;
   top:-70px;
   left:20px;
-  background:var(--lime);
+  background:var(--accent);
   padding:12px
 }
 .skip:focus {
@@ -84,7 +84,7 @@ h3 {
 }
 .utility {
   background:var(--dark);
-  color:#d5ded5;
+  color:#d6dbdd;
   font:10px var(--mono);
   letter-spacing:1px
 }
@@ -105,7 +105,7 @@ h3 {
   width:6px;
   height:6px;
   border-radius:50%;
-  background:var(--lime);
+  background:var(--accent);
   margin-right:8px;
   vertical-align:middle
 }
@@ -162,14 +162,14 @@ h3 {
   height:29px;
   bottom:0;
   right:0;
-  background:#93b552
+  background:#5297b5
 }
 .brand-mark i:nth-child(3) {
   width:13px;
   height:20px;
   bottom:0;
   left:0;
-  background:#727b72
+  background:#72787b
 }
 nav {
   display:flex;
@@ -183,7 +183,7 @@ nav a {
   padding:10px 0
 }
 nav a:hover {
-  color:#587c27
+  color:#27627c
 }
 nav a.active:after {
   content:'';
@@ -193,7 +193,7 @@ nav a.active:after {
   bottom:1px;
   left:50%;
   border-radius:50%;
-  background:#5e802f
+  background:#2f6880
 }
 nav a span {
   margin-left:3px
@@ -224,14 +224,14 @@ nav a span {
   color:white
 }
 .button-dark:hover {
-  background:#334b39
+  background:#394245
 }
-.button-lime {
-  background:var(--lime);
+.button-accent {
+  background:var(--accent);
   color:var(--ink)
 }
-.button-lime:hover {
-  background:#b1e65b
+.button-accent:hover {
+  background:#5bbce6
 }
 .nav-cta {
   padding:13px 17px;
@@ -261,7 +261,7 @@ nav a span {
 }
 .tiny-cross {
   font-size:19px;
-  color:#637d43
+  color:#436c7d
 }
 .hero h1 {
   font-size:clamp(56px,6.6vw,94px);
@@ -270,8 +270,8 @@ nav a span {
   line-height:1.01;
   margin:27px 0 26px
 }
-.green {
-  color:#7e9a44
+.accent-color {
+  color:#44809a
 }
 .next {
   position:relative
@@ -283,12 +283,12 @@ nav a span {
   width:100%;
   height:16px;
   fill:none;
-  stroke:#91ad58;
+  stroke:#5893ad;
   stroke-width:3
 }
 .hero-copy>p {
   font-size:15px;
-  color:#70776f;
+  color:#6f7577;
   max-width:405px;
   line-height:1.85
 }
@@ -310,7 +310,7 @@ nav a span {
   font-size:20px
 }
 .text-link:hover {
-  color:#5b7e28
+  color:#28647e
 }
 .hero-note {
   margin-top:44px;
@@ -318,30 +318,30 @@ nav a span {
   align-items:center;
   gap:12px;
   font-size:10px;
-  color:#555f54
+  color:#545c5f
 }
 .hero-note small {
   display:block;
   font-size:10px;
-  color:#838980;
+  color:#808689;
   margin-top:3px
 }
 .line-icon {
   width:34px;
   height:34px;
-  border:1px solid #cdd4c6;
+  border:1px solid #c8cfd2;
   display:grid;
   place-items:center;
   border-radius:50%;
   font-size:22px;
-  color:#738258
+  color:#627178
 }
 .hero-visual {
   position:relative;
   height:501px;
   border-radius:3px;
   isolation:isolate;
-  background:#17362f
+  background:#172d36
 }
 .factory-photo {
   width:100%;
@@ -371,7 +371,7 @@ nav a span {
 .visual-top>span:first-child {
   padding:6px 9px;
   border:1px solid #ffffff4a;
-  background:#142a2670
+  background:#14232a70
 }
 .target-mark {
   font-size:25px
@@ -381,13 +381,13 @@ nav a span {
   right:22px;
   top:108px;
   writing-mode:vertical-rl;
-  color:#e5ece0;
+  color:#e4e7e8;
   font:8px var(--mono);
   letter-spacing:1.1px
 }
 .image-coordinates span {
   margin-top:20px;
-  color:#afc2b6
+  color:#b1bbc0
 }
 .visual-caption {
   position:absolute;
@@ -399,7 +399,7 @@ nav a span {
 .visual-caption>span {
   font:8px var(--mono);
   letter-spacing:2px;
-  color:#d3e5c4
+  color:#c4dbe5
 }
 .visual-caption p {
   font-size:34px;
@@ -420,20 +420,20 @@ nav a span {
   font-size:25px
 }
 .visual-caption>a:hover {
-  background:var(--lime);
+  background:var(--accent);
   color:var(--ink)
 }
 .experience-card {
   position:absolute;
   bottom:-19px;
   left:28px;
-  background:var(--lime);
+  background:var(--accent);
   display:flex;
   align-items:center;
   gap:16px;
   padding:18px 24px;
   border-radius:3px;
-  box-shadow:0 6px 20px #1b2a230d
+  box-shadow:0 6px 20px #1f24260d
 }
 .experience-card strong {
   font-size:17px;
@@ -448,7 +448,7 @@ nav a span {
 .experience-icon {
   font-size:31px;
   padding-right:17px;
-  border-right:1px solid #8eae50
+  border-right:1px solid #5092ae
 }
 .hero-bottom {
   margin-top:54px;
@@ -459,17 +459,17 @@ nav a span {
   height:62px;
   font:8px var(--mono);
   letter-spacing:1.1px;
-  color:#72796e
+  color:#6e7679
 }
 .hero-bottom a {
-  color:#34422f
+  color:#333b3e
 }
 .hero-bottom a span {
   padding-left:19px;
   font-size:16px
 }
 .partners {
-  background:#f0f2eb;
+  background:#edeff0;
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
   scroll-margin-top:100px
@@ -486,11 +486,11 @@ nav a span {
   line-height:1.8;
   flex-shrink:0;
   padding-right:35px;
-  border-right:1px solid #d7dccf;
-  color:#79816f
+  border-right:1px solid #d1d7da;
+  color:#6f7c81
 }
 .partners-label strong {
-  color:#34442b;
+  color:#323a3d;
   font-weight:400
 }
 .brand-logos {
@@ -531,16 +531,16 @@ nav a span {
 .square {
   width:6px;
   height:6px;
-  background:#759349;
+  background:#497d93;
   display:inline-block;
   flex-shrink:0
 }
 .muted {
-  color:#89917e
+  color:#7e8b91
 }
 .section-intro>p {
   max-width:320px;
-  color:#777e71;
+  color:#717a7e;
   font-size:13px;
   line-height:1.85;
   padding-bottom:5px
@@ -564,7 +564,7 @@ nav a span {
   border-right:0
 }
 .solution-card:hover {
-  background:#ecf2e3
+  background:#e3edf2
 }
 .card-top {
   display:flex;
@@ -575,13 +575,13 @@ nav a span {
 .solution-icon svg {
   width:35px;
   height:35px;
-  stroke:#526840;
+  stroke:#4c575c;
   stroke-width:1.3;
   fill:none
 }
 .card-index {
   font:9px var(--mono);
-  color:#9aA18f
+  color:#8f9ca1
 }
 .solution-card h3 {
   font-size:25px;
@@ -591,7 +591,7 @@ nav a span {
 }
 .solution-card p {
   font-size:11px;
-  color:#737b6c;
+  color:#6c767b;
   line-height:1.85;
   min-height:80px
 }
@@ -609,7 +609,7 @@ nav a span {
 .round-arrow {
   width:28px;
   height:28px;
-  border:1px solid #cdd5c3;
+  border:1px solid #c7ced1;
   border-radius:50%;
   display:grid;
   place-items:center;
@@ -618,7 +618,7 @@ nav a span {
 }
 .solution-card:hover .round-arrow {
   background:var(--ink);
-  color:var(--lime);
+  color:var(--accent);
   border-color:var(--ink)
 }
 .solutions-foot {
@@ -629,12 +629,12 @@ nav a span {
 }
 .solutions-foot>span {
   font-size:11px;
-  color:#828879
+  color:#798488
 }
 .about {
-  background:#eef1e8;
-  border-top:1px solid #e4e8de;
-  border-bottom:1px solid #e4e8de
+  background:#ebedee;
+  border-top:1px solid #e0e4e6;
+  border-bottom:1px solid #e0e4e6
 }
 .about-layout {
   display:grid;
@@ -651,7 +651,7 @@ nav a span {
 }
 .art-label {
   font:8px var(--mono);
-  color:#d3e3d2;
+  color:#d7dcde;
   letter-spacing:1px
 }
 .about-art img {
@@ -663,7 +663,7 @@ nav a span {
 }
 .art-footer {
   border-top:1px solid #ffffff25;
-  color:#a5bbaf;
+  color:#a8b3b8;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -679,7 +679,7 @@ nav a span {
 }
 .about-copy>p:not(.eyebrow) {
   margin-top:24px;
-  color:#70796a;
+  color:#6a7479;
   font-size:13px;
   line-height:1.9
 }
@@ -690,7 +690,7 @@ nav a span {
   display:flex;
   gap:65px;
   margin:30px 0;
-  border-top:1px solid #d6ddcc;
+  border-top:1px solid #d0d6d9;
   padding-top:23px
 }
 .about-facts strong {
@@ -703,7 +703,7 @@ nav a span {
 .about-facts strong span {
   font-size:20px;
   margin-left:20px;
-  color:#7c965a
+  color:#6c7d84
 }
 .about-facts small {
   font:8px var(--mono);
@@ -738,13 +738,13 @@ nav a span {
   color:white
 }
 .filters button:not(.selected):hover {
-  background:#e6ecdf
+  background:#e3e7e8
 }
 .search {
   display:flex;
   gap:10px;
   align-items:center;
-  border:1px solid #dbe0d2;
+  border:1px solid #d5dbdd;
   padding:6px 12px;
   border-radius:3px;
   max-width:225px
@@ -779,15 +779,15 @@ nav a span {
   padding:0
 }
 .product-card:hover {
-  border-color:#8fa977;
+  border-color:#85949b;
   transform:translateY(-3px)
 }
 .product-art {
   height:175px;
   width:100%;
   position:relative;
-  background-color:#edf0e6;
-  background-image:linear-gradient(#dbe1d24d 1px,transparent 1px),linear-gradient(90deg,#dbe1d24d 1px,transparent 1px);
+  background-color:#e9eced;
+  background-image:linear-gradient(#d6dbdd4d 1px,transparent 1px),linear-gradient(90deg,#d6dbdd4d 1px,transparent 1px);
   background-size:22px 22px;
   display:flex;
   align-items:center;
@@ -797,7 +797,7 @@ nav a span {
 .product-art svg {
   height:135px;
   width:210px;
-  filter:drop-shadow(7px 9px 4px #1b2a2312);
+  filter:drop-shadow(7px 9px 4px #1f242612);
   transition:transform .3s
 }
 .product-card:hover svg {
@@ -809,13 +809,13 @@ nav a span {
   top:11px;
   font:7px var(--mono);
   letter-spacing:1px;
-  color:#839075
+  color:#76878f
 }
 .product-art .art-cross {
   position:absolute;
   right:12px;
   bottom:6px;
-  color:#849471
+  color:#76878f
 }
 .product-content {
   padding:21px;
@@ -824,7 +824,7 @@ nav a span {
 .product-content small {
   font:7px var(--mono);
   letter-spacing:1.1px;
-  color:#74875b
+  color:#66767c
 }
 .product-content h3 {
   font-size:21px;
@@ -833,7 +833,7 @@ nav a span {
 }
 .product-content p {
   font-size:10px;
-  color:#78816f;
+  color:#6f7c81;
   margin-bottom:18px
 }
 .product-link {
@@ -849,7 +849,7 @@ nav a span {
 }
 .catalog-status {
   font:10px var(--mono);
-  color:#727e67;
+  color:#67777e;
   margin-top:15px;
   min-height:16px
 }
@@ -862,11 +862,11 @@ nav a span {
 }
 .catalog-footer>span {
   font-size:11px;
-  color:#7b8570
+  color:#707f85
 }
 .process {
   background:var(--dark);
-  color:#f2f6ed;
+  color:#edf3f6;
   position:relative;
   overflow:hidden
 }
@@ -880,10 +880,10 @@ nav a span {
   pointer-events:none
 }
 .process .eyebrow {
-  color:#b6ce99
+  color:#99bece
 }
 .process .square {
-  background:var(--lime)
+  background:var(--accent)
 }
 .process .section-intro {
   align-items:center
@@ -898,12 +898,12 @@ nav a span {
   margin-top:58px
 }
 .process-grid>div {
-  border-top:1px solid #48533c;
+  border-top:1px solid #404a4f;
   padding-top:23px
 }
 .process-grid>div>span {
   font:10px var(--mono);
-  color:#a6c481
+  color:#81b0c4
 }
 .process-grid h3 {
   margin:23px 0 14px;
@@ -912,7 +912,7 @@ nav a span {
 .process-grid p {
   font-size:12px;
   line-height:1.9;
-  color:#a1b098;
+  color:#9ba8ad;
   max-width:300px
 }
 .contact-layout {
@@ -925,7 +925,7 @@ nav a span {
 }
 .contact-layout>div>p:not(.eyebrow) {
   margin-top:24px;
-  color:#747f6c;
+  color:#6c797f;
   font-size:13px
 }
 .contact-details {
@@ -941,16 +941,16 @@ nav a span {
   display:block;
   font:8px var(--mono);
   letter-spacing:1px;
-  color:#879377;
+  color:#798a91;
   margin-top:20px;
   margin-bottom:6px
 }
 .contact-details a:hover {
-  color:#61872b
+  color:#2b6b87
 }
 footer {
-  background:#e9ede2;
-  border-top:1px solid #d9e0d0
+  background:#e5e8ea;
+  border-top:1px solid #d4dadc
 }
 .footer-main {
   display:flex;
@@ -963,7 +963,7 @@ footer {
   line-height:1.7
 }
 .footer-main>p>span {
-  color:#80916c
+  color:#72848b
 }
 .footer-main>div {
   display:flex;
@@ -971,29 +971,29 @@ footer {
   font-size:10px
 }
 .footer-main a:hover {
-  color:#5c7c31
+  color:#31657c
 }
 .footer-bottom {
   display:flex;
   justify-content:space-between;
   gap:20px;
-  border-top:1px solid #d4dccb;
+  border-top:1px solid #cfd5d8;
   padding:20px 0;
   font:8px var(--mono);
-  color:#748368
+  color:#6a7a81
 }
 .footer-bottom .status-dot {
-  background:#7a9a56;
+  background:#6c7d84;
   margin-left:8px
 }
 .footer-bottom>a {
-  color:#3d5032
+  color:#3a4448
 }
 dialog {
   max-width:560px;
   width:calc(100% - 32px);
   padding:27px;
-  border:1px solid #b7c3a9;
+  border:1px solid #afb9bd;
   border-radius:5px;
   color:var(--ink);
   background:var(--paper);
@@ -1002,7 +1002,7 @@ dialog {
   overflow:auto
 }
 dialog::backdrop {
-  background:#0e1d16b8;
+  background:#0e181db8;
   backdrop-filter:blur(6px)
 }
 .dialog-top {
@@ -1022,21 +1022,21 @@ dialog::backdrop {
   padding:4px 9px
 }
 .close-dialog:hover {
-  background:#e6ecde
+  background:#e2e6e8
 }
 #dialog-content h2 {
   font-size:34px;
   margin:25px 0 18px
 }
 #dialog-content p {
-  color:#6f7e64;
+  color:#66767c;
   font-size:13px;
   line-height:1.85
 }
 #dialog-content ul {
   padding-left:19px;
   font-size:13px;
-  color:#65765a;
+  color:#5e6c72;
   line-height:2
 }
 #dialog-inquire {
@@ -1185,7 +1185,7 @@ body.modal-open {
     background:var(--paper);
     border-bottom:1px solid var(--line);
     padding:15px 25px;
-    box-shadow:0 14px 20px #18262010
+    box-shadow:0 14px 20px #1c202210
   }
   nav.open {
     display:flex
@@ -1849,7 +1849,7 @@ body.modal-open {
 }
 
 /* Static company contact directory. */
-.contact-directory { padding: 30px; border: 1px solid var(--line); border-radius: 4px; background: #f1f3ec; }
+.contact-directory { padding: 30px; border: 1px solid var(--line); border-radius: 4px; background: #eef0f1; }
 .contact-directory h3 { font-size: 26px; }
 .contact-directory .contact-details { margin-top: 20px; }
 .contact-directory .contact-details a:last-child { margin-top: 18px; }
@@ -1880,7 +1880,7 @@ body.modal-open {
 }
 @keyframes logo-drift { to { transform: translateX(-50%); } }
 @keyframes hero-arrive { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes signal-pulse { 0%,100% { box-shadow: 0 0 0 0 #c6f47700; } 50% { box-shadow: 0 0 0 5px #c6f47722; } }
+@keyframes signal-pulse { 0%,100% { box-shadow: 0 0 0 0 #77cef400; } 50% { box-shadow: 0 0 0 5px #77cef422; } }
 @media (max-width: 850px) {
   .partners .wrap { display: flex; flex-wrap: wrap; gap: 12px; }
   .partners-label { width: 100%; margin-bottom: 0; }
@@ -1897,4 +1897,21 @@ body.modal-open {
   .logo-track { width: 100%; }
   .logo-group { flex-wrap: wrap; width: 100%; justify-content: center; }
   .logo-group[aria-hidden="true"] { display: none; }
+}
+
+/* Original company identity: cyan, graphite and white. */
+.brand { display: flex; flex-shrink: 0; }
+.company-logo { width: 164px; height: 80px; object-fit: contain; mix-blend-mode: multiply; }
+.footer-main .company-logo { width: 190px; height: 93px; }
+.button-accent { background: #007c9f; color: #fff; }
+.button-accent:hover { background: #006680; }
+.accent-color { color: #009fcd; }
+.next svg { stroke: #009fcd; }
+.experience-card { background: #d8f2f9; color: #26343c; }
+.experience-icon { border-color: #92cadb; }
+.hero-visual { background: #153448; }
+.image-shade { background: linear-gradient(180deg, #102d3b10 20%, #0b2431db 100%); }
+@media (max-width: 600px) {
+  .company-logo { width: 125px; height: 61px; }
+  .footer-main .company-logo { width: 170px; height: 83px; }
 }

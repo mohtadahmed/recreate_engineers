@@ -14,6 +14,7 @@ Open the server in your browser. Both `/index.html` and the legacy `/home.html` 
 
 ## Features
 
+- Original company logo with a cyan and graphite color palette
 - Responsive navigation and accessible service/product detail dialogs
 - Product category filters and search across names, brands and specifications
 - Direct phone, email and social contact links
